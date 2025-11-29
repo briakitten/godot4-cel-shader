@@ -80,7 +80,7 @@ void fragment() {
 	ALBEDO *= alpha;
 #elif USE_ALPHA_CUTOFF
 	ALPHA = color.a * texture(base_texture, UV).a;
-	ALPHA_SCISSOR_THRESHOLD = color.a * texture(base_texture, UV).a;
+	ALPHA_SCISSOR_THRESHOLD = alpha_cutoff;
 #endif
 	
 #if USE_REFRACTION && USE_ALPHA
